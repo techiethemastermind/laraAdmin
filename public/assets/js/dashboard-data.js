@@ -296,17 +296,17 @@ $(document).ready(function(){
 
 /*****Load function start*****/
 $(window).load(function(){
-	window.setTimeout(function(){
-		$.toast({
-			heading: 'Welcome to Hound',
-			text: 'Use the predefined ones, or specify a custom position object.',
-			position: 'top-right',
-			loaderBg:'#fec107',
-			icon: 'success',
-			hideAfter: 3500, 
-			stack: 6
-		});
-	}, 3000);
+	// window.setTimeout(function(){
+	// 	$.toast({
+	// 		heading: 'Welcome to Our Platform',
+	// 		text: 'Use the predefined ones, or specify a custom position object.',
+	// 		position: 'top-right',
+	// 		loaderBg:'#fec107',
+	// 		icon: 'success',
+	// 		hideAfter: 3500, 
+	// 		stack: 6
+	// 	});
+	// }, 3000);
 });
 /*****Load function* end*****/
 

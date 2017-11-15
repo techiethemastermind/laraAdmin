@@ -295,7 +295,7 @@ $(window).load(function(){
 
 var click = false;
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-	if((e.target.hash == '#photos_8')&&(click == false)){
+	if((e.target.hash == '#posts')&&(click == false)){
 		masonryPortfolio();
 		//click = true;
 	}

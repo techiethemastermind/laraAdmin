@@ -66,6 +66,32 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'broker' => $data['broker'],
+            'interest' => $data['interest'],
+            'goals' => $data['goals'],
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
+            'type'  => 3
         ]);
+    }
+
+    /**
+     * Get the post register / login redirect path.
+     *
+     * @return string
+     */
+    public function redirectPath()
+    {
+        if (\Auth::user()->type == 0) {
+            return '/s0';
+        } elseif (\Auth::user()->type == 1) {
+            return '/g1';
+        } elseif (\Auth::user()->type == 2) {
+            return '/m2';
+        } elseif (\Auth::user()->type == 3) {
+            return '/t3';
+        } else {
+            return '/w4';
+        }
     }
 }

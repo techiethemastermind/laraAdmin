@@ -1,0 +1,50 @@
+#step_0, #step_1, #step_2 {
+    padding: 15px 30px;
+}
+#regForm_wrap {
+    width: 600px;
+}
+.open-right-sidebar .page-wrapper{
+    margin-right: 300px;
+}
+.accounts .heading-bg{
+    margin: 0 -25px;
+}
+#accounts_tabs .account_action {
+    margin: 0 8px;
+    color: #999;
+}
+#accounts_tabs .account_action:hover {
+    color: #f5f5f5;
+}
+#accounts_tablist li.mg-r {
+    float: right;
+    margin-right: 15px;
+}
+#accounts_tablist li.mg-r a{
+    border-radius: 0;
+}
+#accounts_tabs td {
+    padding: 10px;
+}
+#accounts_tabs td > img {
+    vertical-align: middle;
+}
+#billing .cards li {
+    display: inline-block;
+}
+.aff-panel {
+    padding: 15px;
+    font-size: 24px;
+    background-color: rgba(91,218,209,0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+.aff-panel i {
+    font-size: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+#affiliate td {
+    padding: 10px;
+}

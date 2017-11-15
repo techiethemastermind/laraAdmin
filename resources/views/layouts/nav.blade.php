@@ -1,10 +1,44 @@
+<?php
+    switch ($user_type) {
+        case 'SuperAdmin':
+            $home_url = '/s0';
+            $accounts_url = '/s0/accounts';
+            $profile_url = '/s0/profile';
+            break;
+        case 'Admin':
+            $home_url = '/g1';
+            $accounts_url = '/g1/accounts';
+            $profile_url = '/g1/profile';
+            break;
+        case 'Mentor':
+            $home_url = '/m2';
+            $accounts_url = '/m2/accounts';
+            $profile_url = '/m2/profile';
+            break;
+        case 'Trader':
+            $home_url = '/t3';
+            $accounts_url = '/t3/accounts';
+            $profile_url = '/t3/profile';
+            break;
+        case 'WebMaster':
+            $home_url = '/w4';
+            $accounts_url = '/w4/accounts';
+            $profile_url = '/w4/profile';
+            break;
+        default:
+            $home_url = '/w4';
+            $accounts_url = '/w4/accounts';
+            $profile_url = '/w4/profile';
+            break;
+    }
+?>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="mobile-only-brand pull-left">
         <div class="nav-header pull-left">
             <div class="logo-wrap">
-                <a href="{{ url('/home')}}">
+                <a href="{{ url($home_url)}}">
                     <img class="brand-img" src="{{ asset('assets/img/logo.png') }}" alt="brand"/>
-                    <span class="brand-text">Hound</span>
+                    <span class="brand-text">Voxy</span>
                 </a>
             </div>
         </div>
@@ -97,7 +131,7 @@
                                         <a href="index3.html">Project</a>
                                     </li>
                                     <li>
-                                        <a href="profile.html">profile</a>
+                                        <a href="{{ url($profile_url)}}">profile</a>
                                     </li>
                                 </ul>
                                 <a href="widgets.html"><div class="pull-left"><i class="zmdi zmdi-flag mr-20"></i><span class="right-nav-text">widgets</span></div><div class="pull-right"><span class="label label-warning">8</span></div><div class="clearfix"></div></a>
@@ -264,10 +298,13 @@
                 </ul>
             </li>
             <li class="dropdown auth-drp">
-                <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="{{ asset('assets/img/user1.png')}}" alt="user_auth" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
+                <?php
+                    $user_pic = 'assets/img/profile/' . $data->avatar;
+                ?>
+                <a href="#" class="dropdown-toggle pr-0" data-toggle="dropdown"><img src="{{ asset($user_pic)}}" alt="user_auth" class="user-auth-img img-circle"/><span class="user-online-status"></span></a>
                 <ul class="dropdown-menu user-auth-dropdown" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
                     <li>
-                        <a href="profile.html"><i class="zmdi zmdi-account"></i><span>Profile</span></a>
+                        <a href="{{ url($profile_url)}}"><i class="zmdi zmdi-account"></i><span>Profile</span></a>
                     </li>
                     <li>
                         <a href="#"><i class="zmdi zmdi-card"></i><span>my balance</span></a>

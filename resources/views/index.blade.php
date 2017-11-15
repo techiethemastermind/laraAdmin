@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #212121;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -69,7 +69,17 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
-                        <a href="{{ url('/home') }}">Trading Room</a>
+                        @if (Auth::user()->type === 0)
+                            <a href="{{ url('/s0') }}">Trading Room</a>
+                        @elseif(Auth::user()->type === 1)
+                            <a href="{{ url('/g1') }}">Trading Room</a>
+                        @elseif(Auth::user()->type === 2)
+                            <a href="{{ url('/m2') }}">Trading Room</a>
+                        @elseif(Auth::user()->type === 3)
+                            <a href="{{ url('/t3') }}">Trading Room</a>
+                        @elseif(Auth::user()->type === 4)
+                            <a href="{{ url('/w4') }}">Trading Room</a>
+                        @endif
                     @else
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
@@ -79,15 +89,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    Voxy Wealth
                 </div>
             </div>
         </div>

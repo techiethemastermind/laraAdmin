@@ -12,19 +12,23 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 	
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	
 	<!-- Morris Charts CSS -->
     <link href="{{ asset('vendors/bower_components/morris.js/morris.css') }}" rel="stylesheet" type="text/css"/>
 	
 	<!-- Data table CSS -->
 	<link href="{{ asset('vendors/bower_components/datatables/media/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css"/>
-	
+
 	<link href="{{ asset('vendors/bower_components/jquery-toast-plugin/dist/jquery.toast.min.css') }}" rel="stylesheet" type="text/css">
+
+	<!-- Bootstrap Dropify CSS -->
+	<link href="{{ asset('vendors/bower_components/dropify/dist/css/dropify.min.css')}}" rel="stylesheet" type="text/css"/>
 		
 	<!-- Custom CSS -->
 	<link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css">
 
     <!-- Scripts -->
     <script>
@@ -42,7 +46,7 @@
 	<!-- /Preloader -->
 
     <!-- #Wrap -->
-    <div class="wrapper theme-4-active pimary-color-red">
+    <div class="wrapper theme-4-active pimary-color-red open-right-sidebar">
 		<!-- Top Menu Items -->
 		@include('layouts.nav')
 		<!-- /Top Menu Items -->
@@ -56,7 +60,7 @@
 		<!-- /Right Sidebar Menu -->
 
 		<!-- Setting Menu -->
-		@include('layouts.setting')
+
 		<!-- /Setting Menu -->
 
 		<!-- Main Content -->
@@ -77,9 +81,17 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{{ asset('vendors/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+	<script src="{{ asset('vendors/bower_components/bootstrap-validator/dist/validator.min.js')}}"></script>
     
 	<!-- Data table JavaScript -->
 	<script src="{{ asset('vendors/bower_components/datatables/media/js/jquery.dataTables.min.js')}}"></script>
+	<script src="{{ asset('assets/js/dataTables-data.js')}}"></script>
+
+	<!-- Gallery JavaScript -->
+	<script src="{{ asset('assets/js/isotope.js')}}"></script>
+	<script src="{{ asset('assets/js/lightgallery-all.js')}}"></script>
+	<script src="{{ asset('assets/js/froogaloop2.min.js')}}"></script>
+	<script src="{{ asset('assets/js/gallery-data.js')}}"></script>
 	
 	<!-- Slimscroll JavaScript -->
 	<script src="{{ asset('assets/js/jquery.slimscroll.js')}}"></script>
@@ -112,9 +124,17 @@
 	
 	<!-- Switchery JavaScript -->
 	<script src="{{ asset('vendors/bower_components/switchery/dist/switchery.min.js')}}"></script>
+
+	<!-- Bootstrap Daterangepicker JavaScript -->
+	<script src="{{ asset('vendors/bower_components/dropify/dist/js/dropify.min.js')}}"></script>
+
+	<!-- Form Flie Upload Data JavaScript -->
+	<script src="{{ asset('assets/js/form-file-upload-data.js')}}"></script>
 	
 	<!-- Init JavaScript -->
 	<script src="{{ asset('assets/js/init.js')}}"></script>
-	<script src="{{ asset('assets/js/dashboard-data.js')}}"></script>
+
+	<!-- Custom JavaScript -->
+	<script src="{{ asset('assets/js/custom-action.js')}}"></script>
 </body>
 </html
